@@ -104,3 +104,6 @@ venv.bak/
 .mypy_cache/
 environments/
 /environments/
+
+#PyCarm project configuration
+.idea/
