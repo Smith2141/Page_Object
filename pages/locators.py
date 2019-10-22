@@ -16,4 +16,3 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".col-sm-6.product_main .price_color")
 
 # http://selenium1py.pythonanywhere.com/ru/accounts/login/
-
