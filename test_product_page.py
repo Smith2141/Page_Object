@@ -7,9 +7,10 @@ def test_guest_can_add_product_to_basket(browser):
     page = ProductPage(browser, link)
     page.open()
     page.add_product_to_basket()
-    time.sleep(2)
     page.solve_quiz_and_get_code()
-    time.sleep(60)
+    page.should_be_name_added_product_correct()
+    page.should_be_price_added_product_correct()
+    time.sleep(5)
 
 
 """

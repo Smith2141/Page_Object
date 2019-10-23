@@ -14,5 +14,7 @@ class ProductPageLocators:
     ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-primary.btn-add-to-basket")
     PRODUCT_NAME = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".col-sm-6.product_main .price_color")
+    ADDED_PRODUCT_NAME = (By.CSS_SELECTOR, ".alert-success.fade strong")
+    ADDED_PRODUCT_PRICE = (By.CSS_SELECTOR, ".alert-info.fade strong")
 
 # http://selenium1py.pythonanywhere.com/ru/accounts/login/
