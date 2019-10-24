@@ -17,5 +17,3 @@ class ProductPage(BasePage):
         product_price_basket = self.browser.find_element(*ProductPageLocators.ADDED_PRODUCT_PRICE).text
         assert product_price_page == product_price_basket,\
             f'The product cost by {product_price_page}, and added to cart by {product_price_basket}'
-
-# pytest -v --tb=line --language=en test_product_page.py
