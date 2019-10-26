@@ -3,6 +3,10 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ADDED_PRODUCT_NAME), \
+            "The add message is present, but should not be"
+
     def add_product_to_basket(self):
         self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON).click()
 
@@ -17,10 +21,6 @@ class ProductPage(BasePage):
         product_price_basket = self.browser.find_element(*ProductPageLocators.ADDED_PRODUCT_PRICE).text
         assert product_price_page == product_price_basket,\
             f'The product cost by {product_price_page}, and added to cart by {product_price_basket}'
-
-    def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.ADDED_PRODUCT_NAME), \
-            "The add message is present, but should not be"
 
     def message_disappeared_after_adding_product_to_basket(self):
         assert self.is_disappeared(*ProductPageLocators.ADDED_PRODUCT_NAME), \
