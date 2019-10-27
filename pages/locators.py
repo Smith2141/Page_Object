@@ -1,6 +1,11 @@
 from selenium.webdriver.common.by import By
 
 
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+
 class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#registration_link")
 
@@ -18,8 +23,10 @@ class ProductPageLocators:
     ADDED_PRODUCT_PRICE = (By.CSS_SELECTOR, ".alert-info.fade strong")
 
 
-class BasePageLocators():
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+class BasketPageLocators:
+    BASKET_HEADER = (By.CSS_SELECTOR, ".breadcrumb .active")
+    BASKET_VIEW_BUTTON = (By.CSS_SELECTOR, ".btn-group a")
+    BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
+    BASKET_EMPTY_TEXT = (By.CSS_SELECTOR, "#content_inner p")
 
 # http://selenium1py.pythonanywhere.com/ru/accounts/login/
