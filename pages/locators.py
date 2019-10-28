@@ -33,5 +33,3 @@ class BasketPageLocators:
     BASKET_VIEW_BUTTON = (By.CSS_SELECTOR, ".btn-group a")
     BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
     BASKET_EMPTY_TEXT = (By.CSS_SELECTOR, "#content_inner p")
-
-# http://selenium1py.pythonanywhere.com/ru/accounts/login/
